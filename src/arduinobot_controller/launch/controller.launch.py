@@ -69,7 +69,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        robot_state_publisher_node,
+        robot_state_publisher,
         controller_manager,
         joint_state_broadcaster_spawner,
         arm_controller_spawner,
