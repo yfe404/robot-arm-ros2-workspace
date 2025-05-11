@@ -2,18 +2,10 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
 	<xacro:property name='PI' value='3.1459'/>
 
-	<ros2_control type="system" name="RobotSystem">
-		<xacro:if value="$(arg is_ignition)">
-			<hardware>
-				<plugin>ign_ros2_control/IgnitionSystem</plugin>
-			</hardware>
-		</xacro:if>
-		<xacro:unless value="$(arg is_ignition)">
-			<hardware>
-				<plugin>gz_ros2_control/GazeboSiSystem</plugin>
-			</hardware>
- 		</xacro:unless>
-
+	<ros2_control name="RobotSystem" type="system">
+		<hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+		</hardware>
 		<joint name="joint_1">
 			<command_interface name="position">
 				<param name="min">-${PI / 2}</param>
