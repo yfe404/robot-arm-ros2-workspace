@@ -18,10 +18,10 @@ arm_controller:
       - joint_2
       - joint_3
 
-    command_interface:
+    command_interfaces:
       - position
 
-    state_interface:
+    state_interfaces:
       - position
 
     open_loop_control: true
@@ -33,10 +33,10 @@ gripper_controller:
       - joint_4
     interface_name: position
 
-#    command_interface:
+#    command_interfaces:
 #      - position
 
-#    state_interface:
+#    state_interfaces:
 #      - position
 
 #    open_loop_control: true
