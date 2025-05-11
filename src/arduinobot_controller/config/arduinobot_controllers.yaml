@@ -6,10 +6,10 @@ controller_manager:
       type: joint_trajectory_controller/JointTrajectoryController
     gripper_controller:
       #type: joint_trajectory_controller/JointTrajectoryController
-      type: forward_command_controller/forwardCommandController
+      type: forward_command_controller/ForwardCommandController
 
     joint_state_broadcaster:
-      type: joint_state_broadcaster/jointStateBroadcaster
+      type: joint_state_broadcaster/JointStateBroadcaster
 
 arm_controller:
   ros__parameters:
